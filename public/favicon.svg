@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" fill="#9d3d1c" />
+  <!-- Subtle architectural inner frame -->
+  <rect x="2.5" y="2.5" width="27" height="27" fill="none" stroke="#ffb59e" stroke-width="0.75" stroke-opacity="0.4" />
+  <!-- Crisp Architectural Serif "K" & System Node in Warm Editorial Cream -->
+  <path d="M8 7 h3.5 v7.2 L17.4 7 H22 L14.6 15.4 L22.8 25 h-4.4 L11.5 17.2 v7.8 H8 Z" fill="#fff8f4" />
+  <!-- Accent System Node Square -->
+  <rect x="20.5" y="6" width="3.5" height="3.5" fill="#ffdbd0" />
+</svg>

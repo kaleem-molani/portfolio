@@ -1,0 +1,26 @@
+# robots.txt for kaleemmolani.com
+User-agent: *
+Disallow: /.env*
+Disallow: /@fs*
+Disallow: /__vite*
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /wp-login.php
+Disallow: /userfiles/
+Disallow: /cgi-bin/
+Disallow: /*.php$
+Disallow: /*.env$
+Disallow: /*.sql$
+Disallow: /*.bak$
+
+# Scraper throttling for high-frequency bots
+User-agent: SemrushBot
+User-agent: DotBot
+User-agent: AhrefsBot
+User-agent: MJ12bot
+User-agent: BLEXBot
+User-agent: DataForSeoBot
+Crawl-delay: 10
+
+Sitemap: https://kaleemmolani.com/sitemap.xml

@@ -1,0 +1,211 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About - Build · Break · Learn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#404848",
+                        "inverse-surface": "#34302b",
+                        "surface-bright": "#fff8f4",
+                        "surface-container-high": "#f0e7df",
+                        "primary-container": "#bd5532",
+                        "tertiary": "#5c5c58",
+                        "surface-container-low": "#fbf2eb",
+                        "tertiary-fixed": "#e4e2dd",
+                        "background": "#fff8f4",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1f1b17",
+                        "on-primary-fixed": "#3a0b00",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#ddc0b8",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "surface-container-highest": "#eae1da",
+                        "surface-tint": "#a0401f",
+                        "inverse-primary": "#ffb59e",
+                        "outline": "#8a726b",
+                        "on-surface-variant": "#56423c",
+                        "secondary-fixed-dim": "#c0c8c8",
+                        "secondary": "#576060",
+                        "on-tertiary-container": "#fefcf7",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#151d1d",
+                        "surface-container": "#f5ece5",
+                        "on-primary-fixed-variant": "#802908",
+                        "inverse-on-surface": "#f8efe8",
+                        "secondary-container": "#d9e1e1",
+                        "primary-fixed": "#ffdbd0",
+                        "primary-fixed-dim": "#ffb59e",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#dce4e4",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#747470",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#eae1da",
+                        "surface": "#fff8f4",
+                        "on-secondary-container": "#5c6464",
+                        "on-background": "#1f1b17",
+                        "surface-dim": "#e1d8d2",
+                        "primary": "#9d3d1c",
+                        "on-primary-container": "#fffbff",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1120px",
+                        "stack-lg": "64px",
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "stack-md": "32px",
+                        "scale": "8px",
+                        "margin-mobile": "24px",
+                        "stack-sm": "16px"
+                    },
+                    "fontFamily": {
+                        "quote": ["Playfair Display"],
+                        "body-md": ["Karla"],
+                        "label-caps": ["Karla"],
+                        "headline-xl-mobile": ["Playfair Display"],
+                        "headline-xl": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["Karla"]
+                    },
+                    "fontSize": {
+                        "quote": ["28px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "body-md": ["17px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["13px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-xl-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 bg-background border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-sm">
+<a class="font-headline-md text-headline-md font-bold text-on-surface hover:text-primary transition-colors" href="/">
+                Build · Break · Learn
+            </a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-gutter items-center font-label-caps text-label-caps">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="/learnings">LEARNINGS</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="/work">LAB</a>
+<a class="text-primary border-b-2 border-primary pb-1" href="/about">ABOUT</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="/now">NOW</a>
+</nav>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-on-surface hover:text-primary">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<!-- Top Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-stack-lg items-center">
+<div class="md:col-span-7 flex flex-col gap-stack-sm">
+<span class="font-label-caps text-label-caps uppercase text-primary">About</span>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface">
+                    I'm Kaleem Molani.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">
+                    I build software systems for a living — and I'm still learning to architect them well. This site is where I do that learning out loud.
+                </p>
+</div>
+<div class="md:col-span-5 relative">
+<!-- Decorative tonal block -->
+<div class="absolute -inset-4 bg-surface-container-low border border-outline-variant rounded-none z-0"></div>
+<!-- Frame matching home hero style -->
+<div class="relative z-10 border border-outline-variant bg-surface p-2 shadow-sm">
+<img alt="Kaleem Molani Portrait" class="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700 aspect-[4/5]" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+</div>
+</div>
+</section>
+<div class="w-full h-px bg-outline-variant my-stack-lg opacity-50"></div>
+<!-- Body Content -->
+<article class="max-w-3xl mx-auto flex flex-col gap-stack-md">
+<section class="flex flex-col gap-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">What I actually do</h2>
+<p class="text-on-surface-variant">
+                    By day I'm a Tech Lead at a Noida-based software company. Most of my work lives in the unglamorous, important middle of things: connecting CRMs, moving companies off systems they've outgrown, wiring up integrations, and lately building AI agents that do useful work instead of just talking. The hard part is never the code — it's understanding the mess well enough to design something that survives contact with reality.
+                </p>
+</section>
+<section class="flex flex-col gap-4 mt-stack-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Why I do this in the open</h2>
+<p class="text-on-surface-variant">
+                    Honestly? Because I learn better when I have to explain myself. Writing something down forces me to actually understand it — and the half-finished, slightly-wrong version is usually more useful to someone a few steps behind me than a polished tutorial written years later. So I publish the learning as it happens: the wins, the dead ends, and the things I got embarrassingly wrong before they clicked.
+                </p>
+</section>
+<section class="flex flex-col gap-4 mt-stack-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">How I think</h2>
+<p class="text-on-surface-variant mb-2">
+                    A few things I believe, that show up in everything I build:
+                </p>
+<ul class="flex flex-col gap-4 pl-4 border-l-2 border-primary">
+<li class="text-on-surface-variant pl-4 relative">
+<span class="absolute -left-5 top-2 w-2 h-2 bg-primary"></span>
+<strong class="text-on-surface block mb-1">Systems before tactics.</strong>
+                        Most problems handed to me as a "quick fix" are system-design problems in disguise. Fix the system and the symptoms stop coming back.
+                    </li>
+<li class="text-on-surface-variant pl-4 relative">
+<span class="absolute -left-5 top-2 w-2 h-2 bg-primary"></span>
+<strong class="text-on-surface block mb-1">Model reality first.</strong>
+                        Get the underlying model right before automating anything — name things correctly, map how they actually relate. Automation on top of a wrong model just makes the wrong thing happen faster.
+                    </li>
+<li class="text-on-surface-variant pl-4 relative">
+<span class="absolute -left-5 top-2 w-2 h-2 bg-primary"></span>
+<strong class="text-on-surface block mb-1">Clarity is a deliverable.</strong>
+                        If I can't explain a design simply, I don't understand it yet. The spec, the diagram, the plain-English version — that's not overhead, it's the work.
+                    </li>
+</ul>
+</section>
+<section class="flex flex-col gap-4 mt-stack-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">The rest of me</h2>
+<p class="text-on-surface-variant">
+                    When I'm not doing that, I tinker with microcontrollers — ESP32s and the like — building small hardware gadgets for the pure fun of making something physical. I'm building an AI curriculum on the side. And I teach: my own team, and a couple of people one-on-one. I've come to think explaining things is just how my brain processes them — this site is the public version of that habit. I'm based in Jodhpur, in Rajasthan, India.
+                </p>
+</section>
+</article>
+<!-- Closing Statement -->
+<section class="mt-stack-lg max-w-4xl mx-auto text-center border-t border-b border-outline-variant py-stack-md bg-surface-container-low px-margin-mobile relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500"></div>
+<p class="font-quote text-quote text-on-surface">
+                "That's the whole idea here: not a portfolio of finished things, but a notebook kept in the open. If you're a few steps behind me on any of this, I hope it saves you some time. If you're a few steps ahead — tell me what I'm getting wrong."
+            </p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant mt-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md gap-stack-sm">
+<div class="font-headline-md text-headline-md text-on-surface font-bold text-xl md:text-2xl">
+                Build · Break · Learn
+            </div>
+<div class="font-body-md text-body-md text-on-surface-variant text-center md:text-right">
+                © 2025 — Systems Builder &amp; Learner. Built for clarity.
+            </div>
+</div>
+</footer>
+
+
+</body></html>

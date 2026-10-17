@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Learnings | Build · Break · Learn</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Fonts: Karla (Body/Labels) & Playfair Display (Headlines/Quotes) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config injected via JSON guidance -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#dce4e4",
+                        "on-secondary-fixed": "#151d1d",
+                        "on-secondary-fixed-variant": "#404848",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fff8f4",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "secondary": "#576060",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "secondary-container": "#d9e1e1",
+                        "surface-container": "#f5ece5",
+                        "inverse-surface": "#34302b",
+                        "outline-variant": "#ddc0b8",
+                        "tertiary-container": "#747470",
+                        "outline": "#8a726b",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1f1b17",
+                        "on-tertiary-container": "#fefcf7",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#3a0b00",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f8efe8",
+                        "on-primary-container": "#fffbff",
+                        "on-surface": "#1f1b17",
+                        "background": "#fff8f4",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#ffb59e",
+                        "primary-container": "#bd5532",
+                        "on-primary-fixed-variant": "#802908",
+                        "surface": "#fff8f4",
+                        "on-surface-variant": "#56423c",
+                        "surface-tint": "#a0401f",
+                        "surface-container-low": "#fbf2eb",
+                        "primary-fixed": "#ffdbd0",
+                        "surface-variant": "#eae1da",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#e4e2dd",
+                        "surface-dim": "#e1d8d2",
+                        "primary": "#9d3d1c",
+                        "inverse-primary": "#ffb59e",
+                        "tertiary": "#5c5c58",
+                        "surface-container-highest": "#eae1da",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#c0c8c8",
+                        "surface-container-high": "#f0e7df",
+                        "on-secondary-container": "#5c6464"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "stack-sm": "16px",
+                        "container-max": "1120px",
+                        "stack-lg": "64px",
+                        "scale": "8px",
+                        "stack-md": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Playfair Display"],
+                        "body-lg": ["Karla"],
+                        "label-caps": ["Karla"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-md": ["Karla"],
+                        "quote": ["Playfair Display"],
+                        "headline-xl-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["13px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["17px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "quote": ["28px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-xl-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container flex flex-col min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<header class="sticky top-0 z-50 w-full bg-surface border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter hover:text-primary transition-colors duration-200" href="#">
+                Build · Break · Learn
+            </a>
+<!-- Navigation Links (Hidden on Mobile, flex on md+) -->
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-label-caps text-label-caps uppercase text-primary font-bold border-b-2 border-primary pb-1 opacity-80 transition-opacity" href="#">
+                    Learnings
+                </a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-all duration-200" href="#">
+                    Lab
+                </a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-all duration-200" href="#">
+                    About
+                </a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-all duration-200" href="#">
+                    Now
+                </a>
+</nav>
+<!-- Trailing Action -->
+<div class="hidden md:block">
+<!-- Primary Button Style: solid secondary_color with white text -->
+<button class="bg-secondary text-on-secondary font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-on-surface transition-colors duration-200">
+                    Subscribe
+                </button>
+</div>
+<!-- Mobile Menu Toggle (Minimalist icon) -->
+<button class="md:hidden text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-stack-lg">
+<!-- Hero / Intro Section -->
+<section class="max-w-3xl mb-stack-lg">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mb-stack-md">
+                Learnings
+            </h1>
+<div class="border-l-[3px] border-primary pl-gutter">
+<p class="font-quote text-quote text-on-surface-variant leading-relaxed">
+                    The notes I wish someone had handed me before I started — organized by what they're about.
+                </p>
+</div>
+</section>
+<!-- Topic Cards Stack -->
+<section class="flex flex-col gap-stack-md">
+<!-- Topic Card 1: Integration -->
+<article class="flex flex-col md:flex-row gap-gutter border border-outline-variant bg-surface-container-lowest p-margin-mobile md:p-gutter hover:bg-surface-container-low transition-colors duration-300 group relative">
+<!-- Editorial active bar on hover -->
+<div class="absolute inset-y-0 left-0 w-1 bg-primary transform scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300"></div>
+<!-- Topic Identity -->
+<div class="md:w-1/3 flex flex-col justify-between">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-scale">Integration</h2>
+<span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 font-label-caps text-label-caps uppercase tracking-widest">
+                            12 Articles
+                        </span>
+</div>
+</div>
+<!-- Latest Content Teaser -->
+<div class="md:w-2/3 flex flex-col justify-center border-t md:border-t-0 md:border-l border-outline-variant pt-stack-sm md:pt-0 md:pl-gutter">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-scale uppercase tracking-wider">Latest Note</span>
+<h3 class="font-body-lg text-body-lg text-on-surface leading-relaxed mb-stack-sm group-hover:text-primary transition-colors duration-200">
+                        The Hidden Cost of Brittle Webhooks - Why your integrations break when your vendors 'improve' their API.
+                    </h3>
+<!-- Secondary Button Style: primary_color outline with arrow -->
+<a class="inline-flex items-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-4 py-2 uppercase w-max hover:bg-primary hover:text-on-primary transition-colors duration-200" href="#">
+                        Browse
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Topic Card 2: Migration -->
+<article class="flex flex-col md:flex-row gap-gutter border border-outline-variant bg-surface-container-lowest p-margin-mobile md:p-gutter hover:bg-surface-container-low transition-colors duration-300 group relative">
+<div class="absolute inset-y-0 left-0 w-1 bg-primary transform scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300"></div>
+<div class="md:w-1/3 flex flex-col justify-between">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-scale">Migration</h2>
+<span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 font-label-caps text-label-caps uppercase tracking-widest">
+                            8 Articles
+                        </span>
+</div>
+</div>
+<div class="md:w-2/3 flex flex-col justify-center border-t md:border-t-0 md:border-l border-outline-variant pt-stack-sm md:pt-0 md:pl-gutter">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-scale uppercase tracking-wider">Latest Note</span>
+<h3 class="font-body-lg text-body-lg text-on-surface leading-relaxed mb-stack-sm group-hover:text-primary transition-colors duration-200">
+                        Moving off the Monolith - A structural guide to migrating legacy data without losing your mind.
+                    </h3>
+<a class="inline-flex items-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-4 py-2 uppercase w-max hover:bg-primary hover:text-on-primary transition-colors duration-200" href="#">
+                        Browse
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Topic Card 3: Agentic AI -->
+<article class="flex flex-col md:flex-row gap-gutter border border-outline-variant bg-surface-container-lowest p-margin-mobile md:p-gutter hover:bg-surface-container-low transition-colors duration-300 group relative">
+<div class="absolute inset-y-0 left-0 w-1 bg-primary transform scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300"></div>
+<div class="md:w-1/3 flex flex-col justify-between">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-scale">Agentic AI</h2>
+<span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 font-label-caps text-label-caps uppercase tracking-widest">
+                            5 Articles
+                        </span>
+</div>
+</div>
+<div class="md:w-2/3 flex flex-col justify-center border-t md:border-t-0 md:border-l border-outline-variant pt-stack-sm md:pt-0 md:pl-gutter">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-scale uppercase tracking-wider">Latest Note</span>
+<h3 class="font-body-lg text-body-lg text-on-surface leading-relaxed mb-stack-sm group-hover:text-primary transition-colors duration-200">
+                        Beyond the Prompt - Building agents that reason, plan, and actually solve problems.
+                    </h3>
+<a class="inline-flex items-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-4 py-2 uppercase w-max hover:bg-primary hover:text-on-primary transition-colors duration-200" href="#">
+                        Browse
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-surface border-t border-outline-variant mt-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-stack-md max-w-container-max mx-auto gap-stack-sm md:gap-0">
+<!-- Brand Logo / Copyright -->
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">
+                    Build · Break · Learn
+                </span>
+<span class="font-body-md text-body-md text-on-surface-variant">
+                    © 2024 Build · Break · Learn. All rights reserved.
+                </span>
+</div>
+<!-- Links (Rendered per exact JSON mandate) -->
+<nav class="flex items-center gap-gutter mt-stack-sm md:mt-0">
+<a class="font-label-caps text-label-caps uppercase text-primary font-bold hover:text-primary transition-colors" href="#">
+                    Learnings
+                </a>
+<a class="font-label-caps text-label-caps uppercase text-on-secondary-fixed-variant hover:text-primary transition-colors" href="#">
+                    Lab
+                </a>
+<a class="font-label-caps text-label-caps uppercase text-on-secondary-fixed-variant hover:text-primary transition-colors" href="#">
+                    About
+                </a>
+<a class="font-label-caps text-label-caps uppercase text-on-secondary-fixed-variant hover:text-primary transition-colors" href="#">
+                    Now
+                </a>
+</nav>
+</div>
+</footer>
+</body></html>

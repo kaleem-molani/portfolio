@@ -1,0 +1,197 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Home: The Learning Journal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "surface": "#fff8f4",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#ddc0b8",
+                        "inverse-on-surface": "#f8efe8",
+                        "secondary-fixed": "#dce4e4",
+                        "on-background": "#1f1b17",
+                        "outline": "#8a726b",
+                        "on-secondary-container": "#5c6464",
+                        "on-primary-container": "#fffbff",
+                        "surface-container-high": "#f0e7df",
+                        "primary-container": "#bd5532",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#747470",
+                        "inverse-surface": "#34302b",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "primary": "#9d3d1c",
+                        "tertiary-fixed": "#e4e2dd",
+                        "surface-tint": "#a0401f",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#fbf2eb",
+                        "primary-fixed-dim": "#ffb59e",
+                        "on-tertiary-container": "#fefcf7",
+                        "on-secondary-fixed-variant": "#404848",
+                        "secondary": "#576060",
+                        "surface-dim": "#e1d8d2",
+                        "secondary-fixed-dim": "#c0c8c8",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "on-primary-fixed": "#3a0b00",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "inverse-primary": "#ffb59e",
+                        "secondary-container": "#d9e1e1",
+                        "surface-container": "#f5ece5",
+                        "surface-variant": "#eae1da",
+                        "tertiary": "#5c5c58",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#56423c",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#802908",
+                        "surface-bright": "#fff8f4",
+                        "on-secondary-fixed": "#151d1d",
+                        "surface-container-highest": "#eae1da",
+                        "primary-fixed": "#ffdbd0",
+                        "on-surface": "#1f1b17",
+                        "background": "#fff8f4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "stack-sm": "16px",
+                        "scale": "8px",
+                        "stack-lg": "64px",
+                        "stack-md": "32px",
+                        "container-max": "1120px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Karla"],
+                        "body-lg": ["Karla"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-xl": ["Playfair Display"],
+                        "label-caps": ["Karla"],
+                        "headline-xl-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "quote": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["17px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["13px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "quote": ["28px", { "lineHeight": "1.4", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body { font-family: 'Karla', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline-md, .font-headline-lg, .font-headline-xl, .font-quote { font-family: 'Playfair Display', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar from Shared Components -->
+<nav class="bg-background dark:bg-background border-b border-outline-variant dark:border-outline docked full-width top-0 z-50 sticky transition-all duration-300">
+<div class="flex justify-between items-center w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-sm">
+<div class="flex flex-col"><a class="font-headline-md text-headline-md font-semibold text-on-surface dark:text-on-surface" href="#">Build · Break · Learn</a><span class="font-label-caps text-label-caps text-on-surface-variant opacity-80">A systems builder's open notebook</span></div>
+<div class="hidden md:flex gap-gutter items-center font-label-caps text-label-caps"><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Learnings</a><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Lab</a><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">About</a><a class="text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Now</a></div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col gap-stack-lg">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center mt-stack-md"><div class="md:col-span-7 flex flex-col gap-stack-sm">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface">Learning in public, one system at a time.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">Right now I'm deep in Neo4j and Cypher, trying to work out how to model messy, highly-connected data for a personal knowledge tool I'm building. Very much still in the figuring-it-out phase — which is the whole point.</p>
+</div>
+<div class="md:col-span-5 hidden md:flex items-center justify-center">
+<div class="w-full aspect-square border border-outline-variant bg-surface-container-low flex items-center justify-center relative">
+<div class="absolute inset-4 border border-outline-variant opacity-40"></div>
+<span class="material-symbols-outlined text-primary" style="font-size: 80px;">architecture</span>
+</div>
+</div></section>
+<hr class="border-t border-outline-variant w-full my-stack-sm">
+<!-- Recently Learned Section -->
+<section class="flex flex-col gap-stack-md">
+<div class="flex flex-col gap-2 border-b border-outline-variant pb-4"><div class="flex justify-between items-end"><h2 class="font-headline-md text-headline-md text-on-surface">Recently Learned</h2><a class="font-label-caps text-label-caps text-primary hover:text-primary-container transition-colors flex items-center gap-1" href="#">All learnings →</a></div><p class="font-body-md text-body-md text-on-surface-variant">The notes I wish someone had handed me before I started.</p></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Entry 1 -->
+<article class="flex flex-col gap-4 group cursor-pointer border-b md:border-b-0 md:border-r border-outline-variant pb-8 md:pb-0 md:pr-8 last:border-0 last:pr-0">
+<div class="flex justify-between items-center font-label-caps text-label-caps text-on-surface-variant">
+<span class="">Oct 24, 2024</span>
+<span class="bg-surface-container-high px-2 py-1 text-primary">Systems</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors text-[24px]">Architecting Scalable Feedback Loops</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Exploring the structural requirements for designing feedback mechanisms that self-correct without manual intervention.</p>
+</article>
+<!-- Entry 2 -->
+<article class="flex flex-col gap-4 group cursor-pointer border-b md:border-b-0 md:border-r border-outline-variant pb-8 md:pb-0 md:pr-8 last:border-0 last:pr-0">
+<div class="flex justify-between items-center font-label-caps text-label-caps text-on-surface-variant">
+<span class="">Oct 18, 2024</span>
+<span class="bg-surface-container-high px-2 py-1 text-primary">AI</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors text-[24px]">Mental Models for LLM Orchestration</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Moving beyond single prompts. Structuring multi-agent workflows using a declarative systems approach.</p>
+</article>
+<!-- Entry 3 -->
+<article class="flex flex-col gap-4 group cursor-pointer border-b md:border-b-0 md:border-r border-outline-variant pb-8 md:pb-0 md:pr-8 last:border-0 last:pr-0">
+<div class="flex justify-between items-center font-label-caps text-label-caps text-on-surface-variant">
+<span class="">Oct 12, 2024</span>
+<span class="bg-surface-container-high px-2 py-1 text-primary">CRM</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors text-[24px]">Ontology Design in Customer Data</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Why traditional relational databases fail to capture the nuanced realities of human relationship networks.</p>
+</article>
+</div>
+</section>
+<!-- Current Focus & From the Lab (Bento Layout) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mt-stack-md">
+<!-- Current Focus (Now) -->
+<div class="md:col-span-7 bg-surface-container-lowest border border-outline-variant p-8 flex flex-col gap-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div class="flex items-center gap-2 text-primary font-label-caps text-label-caps">
+<span class="w-2 h-2 bg-primary rounded-none animate-pulse"></span>
+                    Current Focus (Now)
+                </div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Mastering Graph Databases</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Right now I'm deep in Neo4j and Cypher, trying to work out how to model messy, highly-connected data for a personal knowledge tool I'm building. Very much still in the figuring-it-out phase — which is the whole point.</p>
+<div class="mt-4 flex gap-4">
+<span class="px-3 py-1 bg-surface-container font-label-caps text-label-caps text-on-surface">Neo4j</span>
+<span class="px-3 py-1 bg-surface-container font-label-caps text-label-caps text-on-surface">Knowledge Graphs</span>
+<span class="px-3 py-1 bg-surface-container font-label-caps text-label-caps text-on-surface">Ontology</span>
+</div>
+</div>
+<!-- From the Lab -->
+<div class="md:col-span-5 bg-surface border border-outline-variant p-8 flex flex-col gap-6 group cursor-pointer hover:bg-surface-container transition-colors duration-300"><div class="font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant pb-2">From the Lab</div><div class="flex-grow flex flex-col justify-center"><div class="w-12 h-12 border border-outline-variant flex items-center justify-center mb-4 bg-surface-container-highest group-hover:bg-primary group-hover:border-primary transition-colors"><span class="material-symbols-outlined text-on-surface group-hover:text-on-primary transition-colors">science</span></div><h3 class="font-headline-md text-headline-md text-on-surface mb-2">Project — Obsidian Sync Engine</h3><p class="font-body-md text-body-md text-on-surface-variant">A small Python script I built to parse my Obsidian notes and sync them into a local SQLite database. The build was the easy part. The humbling part: keeping metadata clean is far harder than pulling the data out.</p></div><div class="flex items-center gap-2 text-primary font-label-caps text-label-caps mt-auto">Read the post-mortem →</div></div>
+</section>
+</main>
+<!-- Footer from Shared Components -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline full-width mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-start w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg gap-stack-md">
+<div class="flex flex-col gap-4"><div class="font-headline-md text-headline-md text-on-surface">Build · Break · Learn</div><div class="font-body-md text-body-md text-on-surface-variant">© 2025 — Systems Builder &amp; Learner. Built for clarity.</div></div>
+</div>
+</footer>
+
+
+
+
+</body></html>
